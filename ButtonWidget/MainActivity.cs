@@ -13,6 +13,15 @@ namespace ButtonWidget
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+
+            Button buttonShow = FindViewById<Button>(Resource.Id.buttonShow);
+            buttonShow.Click += ButtonShow_Click;
+        }
+
+        private void ButtonShow_Click(object sender, System.EventArgs e)
+        {
+            TextView text = FindViewById<TextView>(Resource.Id.textViewShow);
+            text.Visibility = Android.Views.ViewStates.Visible;
         }
     }
 }
